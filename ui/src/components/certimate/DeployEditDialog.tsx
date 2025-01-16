@@ -26,6 +26,7 @@ import DeployToDogeCloudCDN from "./DeployToDogeCloudCDN";
 import DeployToLocal from "./DeployToLocal";
 import DeployToSSH from "./DeployToSSH";
 import DeployToWebhook from "./DeployToWebhook";
+import DeployToUnicloud from "./DeployToUnicloud";
 import DeployToKubernetesSecret from "./DeployToKubernetesSecret";
 import DeployToVolcengineLive from "./DeployToVolcengineLive";
 import DeployToVolcengineCDN from "./DeployToVolcengineCDN";
@@ -173,6 +174,9 @@ const DeployEditDialog = ({ trigger, deployConfig, onSave }: DeployEditDialogPro
       break;
     case "webhook":
       childComponent = <DeployToWebhook />;
+      break;
+    case "unicloud":
+      childComponent = <DeployToUnicloud />;
       break;
     case "k8s-secret":
       childComponent = <DeployToKubernetesSecret />;

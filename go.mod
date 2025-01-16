@@ -1,4 +1,4 @@
-module github.com/usual2970/certimate
+module certimate
 
 go 1.22.0
 
@@ -14,6 +14,7 @@ require (
 	github.com/alibabacloud-go/tea v1.2.2
 	github.com/aliyun/aliyun-oss-go-sdk v3.0.2+incompatible
 	github.com/baidubce/bce-sdk-go v0.9.197
+	github.com/byteplus-sdk/byteplus-sdk-golang v1.0.35
 	github.com/go-acme/lego/v4 v4.20.2
 	github.com/gojek/heimdall/v7 v7.0.3
 	github.com/huaweicloud/huaweicloud-sdk-go-v3 v0.1.120
@@ -46,7 +47,6 @@ require (
 	github.com/alibabacloud-go/tea-utils/v2 v2.0.6 // indirect
 	github.com/aws/aws-sdk-go-v2/service/route53 v1.46.0 // indirect
 	github.com/blinkbean/dingtalk v1.1.3 // indirect
-	github.com/byteplus-sdk/byteplus-sdk-golang v1.0.35 // indirect
 	github.com/emicklei/go-restful/v3 v3.11.0 // indirect
 	github.com/fxamacker/cbor/v2 v2.7.0 // indirect
 	github.com/go-lark/lark v1.14.1 // indirect

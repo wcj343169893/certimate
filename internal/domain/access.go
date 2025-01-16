@@ -93,6 +93,11 @@ type WebhookAccess struct {
 	Url string `json:"url"`
 }
 
+type UnicloudAccess struct {
+	Username      string `json:"username"`
+	Password      string `json:"password"`
+}
+
 type KubernetesAccess struct {
 	KubeConfig string `json:"kubeConfig"`
 }

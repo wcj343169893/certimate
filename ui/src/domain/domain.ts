@@ -91,9 +91,11 @@ export const deployTargetsMap: Map<DeployTarget["type"], DeployTarget> = new Map
     ["local", "common.provider.local", "/imgs/providers/local.svg"],
     ["ssh", "common.provider.ssh", "/imgs/providers/ssh.svg"],
     ["webhook", "common.provider.webhook", "/imgs/providers/webhook.svg"],
+    ["unicloud", "common.provider.unicloud", "/imgs/providers/unicloud.svg"],
     ["k8s-secret", "common.provider.kubernetes.secret", "/imgs/providers/k8s.svg"],
     ["volcengine-live", "common.provider.volcengine.live", "/imgs/providers/volcengine.svg"],
     ["volcengine-cdn", "common.provider.volcengine.cdn", "/imgs/providers/volcengine.svg"],
     ["byteplus-cdn", "common.provider.byteplus.cdn", "/imgs/providers/byteplus.svg"],
   ].map(([type, name, icon]) => [type, { type, provider: type.split("-")[0], name, icon }])
 );
+

@@ -58,6 +58,13 @@ cd certimate
 make local.run
 ```
 
+go mod vendor&& npm --prefix=./ui install && npm --prefix=./ui run build && go run main.go serve --http 127.0.0.1:8090
+
+go mod vendor
+npm --prefix=./ui install
+npm --prefix=./ui run build
+go run main.go serve --http 127.0.0.1:8090
+
 ## 二、使用
 
 执行完上述安装操作后，在浏览器中访问 `http://127.0.0.1:8090` 即可访问 Certimate 管理页面。
@@ -79,7 +86,7 @@ make local.run
 |   华为云   |      √       |      √       | 可签发在华为云注册的域名；可部署到华为云 CDN、ELB                 |
 |   七牛云   |              |      √       | 可部署到七牛云 CDN                                                |
 |   多吉云   |              |      √       | 可部署到多吉云 CDN                                                |
-|  火山引擎  |       √       |      √       | 可签发在火山引擎注册的域名；可部署到火山引擎 Live、CDN                 |
+|  火山引擎  |      √       |      √       | 可签发在火山引擎注册的域名；可部署到火山引擎 Live、CDN            |
 |    AWS     |      √       |              | 可签发在 AWS Route53 托管的域名                                   |
 | CloudFlare |      √       |              | 可签发在 CloudFlare 注册的域名；CloudFlare 服务自带 SSL 证书      |
 |  GoDaddy   |      √       |              | 可签发在 GoDaddy 注册的域名                                       |

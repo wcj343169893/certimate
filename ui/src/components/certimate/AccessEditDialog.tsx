@@ -20,6 +20,7 @@ import AccessHttpreqForm from "./AccessHttpreqForm";
 import AccessLocalForm from "./AccessLocalForm";
 import AccessSSHForm from "./AccessSSHForm";
 import AccessWebhookForm from "./AccessWebhookForm";
+import AccessUnicloudForm from "./AccessUnicloudForm";
 import AccessKubernetesForm from "./AccessKubernetesForm";
 import AccessVolcengineForm from "./AccessVolcengineForm";
 import AccessByteplusForm from "./AccessByteplusForm";
@@ -207,6 +208,17 @@ const AccessEditDialog = ({ trigger, op, data, className }: AccessEditProps) => 
         />
       );
       break;
+    case "unicloud":
+      childComponent = (
+        <AccessUnicloudForm
+          data={data}
+          op={op}
+          onAfterReq={() => {
+            setOpen(false);
+          }}
+        />
+      );
+      break;
     case "k8s":
       childComponent = (
         <AccessKubernetesForm
@@ -297,3 +309,4 @@ const AccessEditDialog = ({ trigger, op, data, className }: AccessEditProps) => 
 };
 
 export default AccessEditDialog;
+
