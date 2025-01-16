@@ -1,9 +1,9 @@
 package routes
 
 import (
-	"github.com/usual2970/certimate/internal/notify"
-	"github.com/usual2970/certimate/internal/repository"
-	"github.com/usual2970/certimate/internal/rest"
+	"certimate/internal/notify"
+	"certimate/internal/repository"
+	"certimate/internal/rest"
 
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/pocketbase/apis"

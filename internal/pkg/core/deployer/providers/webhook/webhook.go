@@ -10,9 +10,9 @@ import (
 
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
-	xhttp "github.com/usual2970/certimate/internal/utils/http"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/utils/x509"
+	xhttp "certimate/internal/utils/http"
 )
 
 type WebhookDeployerConfig struct {

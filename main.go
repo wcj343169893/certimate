@@ -11,12 +11,12 @@ import (
 	"github.com/pocketbase/pocketbase/core"
 	"github.com/pocketbase/pocketbase/plugins/migratecmd"
 
-	_ "github.com/usual2970/certimate/migrations"
+	_ "certimate/migrations"
 
-	"github.com/usual2970/certimate/internal/domains"
-	"github.com/usual2970/certimate/internal/routes"
-	"github.com/usual2970/certimate/internal/utils/app"
-	"github.com/usual2970/certimate/ui"
+	"certimate/internal/domains"
+	"certimate/internal/routes"
+	"certimate/internal/utils/app"
+	"certimate/ui"
 
 	_ "time/tzdata"
 )

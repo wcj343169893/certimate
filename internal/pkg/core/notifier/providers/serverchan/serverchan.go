@@ -1,4 +1,4 @@
-﻿package serverchan
+package serverchan
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 
 	notifyHttp "github.com/nikoksr/notify/service/http"
 
-	"github.com/usual2970/certimate/internal/pkg/core/notifier"
+	"certimate/internal/pkg/core/notifier"
 )
 
 type ServerChanNotifierConfig struct {

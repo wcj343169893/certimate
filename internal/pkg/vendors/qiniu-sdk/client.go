@@ -1,4 +1,4 @@
-﻿package qiniusdk
+package qiniusdk
 
 import (
 	"bytes"
@@ -9,7 +9,7 @@ import (
 
 	"github.com/qiniu/go-sdk/v7/auth"
 
-	xhttp "github.com/usual2970/certimate/internal/utils/http"
+	xhttp "certimate/internal/utils/http"
 )
 
 const qiniuHost = "https://api.qiniu.com"

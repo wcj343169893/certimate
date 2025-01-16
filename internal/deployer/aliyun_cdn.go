@@ -11,7 +11,7 @@ import (
 	"github.com/alibabacloud-go/tea/tea"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/domain"
+	"certimate/internal/domain"
 )
 
 type AliyunCDNDeployer struct {

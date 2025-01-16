@@ -1,4 +1,4 @@
-﻿package tencentcloudclb_test
+package tencentcloudclb_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/tencentcloud-clb"
+	provider "certimate/internal/pkg/core/deployer/providers/tencentcloud-clb"
 )
 
 var (

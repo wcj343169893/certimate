@@ -1,4 +1,4 @@
-﻿package webhook
+package webhook
 
 import (
 	"context"
@@ -6,7 +6,7 @@ import (
 
 	"github.com/nikoksr/notify/service/http"
 
-	"github.com/usual2970/certimate/internal/pkg/core/notifier"
+	"certimate/internal/pkg/core/notifier"
 )
 
 type WebhookNotifierConfig struct {

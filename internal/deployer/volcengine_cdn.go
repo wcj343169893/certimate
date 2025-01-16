@@ -6,11 +6,12 @@ import (
 	"fmt"
 	"strings"
 
-	volcenginecdn "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/volcengine-cdn"
+	volcenginecdn "certimate/internal/pkg/core/uploader/providers/volcengine-cdn"
+
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
 
 	xerrors "github.com/pkg/errors"
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
 	"github.com/volcengine/volc-sdk-golang/service/cdn"
 )
 

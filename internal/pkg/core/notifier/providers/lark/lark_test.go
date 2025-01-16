@@ -1,4 +1,4 @@
-﻿package lark_test
+package lark_test
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/lark"
+	provider "certimate/internal/pkg/core/notifier/providers/lark"
 )
 
 const (

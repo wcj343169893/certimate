@@ -1,4 +1,4 @@
-﻿package telegram
+package telegram
 
 import (
 	"context"
@@ -6,7 +6,7 @@ import (
 
 	"github.com/nikoksr/notify/service/telegram"
 
-	"github.com/usual2970/certimate/internal/pkg/core/notifier"
+	"certimate/internal/pkg/core/notifier"
 )
 
 type TelegramNotifierConfig struct {

@@ -1,9 +1,9 @@
-﻿package deployer_test
+package deployer_test
 
 import (
 	"testing"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/deployer"
 )
 
 /*

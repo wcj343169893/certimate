@@ -1,4 +1,4 @@
-﻿package aliyunalb
+package aliyunalb
 
 import (
 	"context"
@@ -11,9 +11,9 @@ import (
 	"github.com/alibabacloud-go/tea/tea"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerCas "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/aliyun-cas"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerCas "certimate/internal/pkg/core/uploader/providers/aliyun-cas"
 )
 
 type AliyunALBDeployerConfig struct {

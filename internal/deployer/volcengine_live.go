@@ -7,11 +7,12 @@ import (
 	"regexp"
 	"strings"
 
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
+	volcenginelive "certimate/internal/pkg/core/uploader/providers/volcengine-live"
+	"certimate/internal/pkg/utils/cast"
+
 	xerrors "github.com/pkg/errors"
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	volcenginelive "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/volcengine-live"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
 	"github.com/volcengine/volc-sdk-golang/base"
 	live "github.com/volcengine/volc-sdk-golang/service/live/v20230101"
 )

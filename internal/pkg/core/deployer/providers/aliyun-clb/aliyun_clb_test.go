@@ -1,4 +1,4 @@
-﻿package aliyunclb_test
+package aliyunclb_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/aliyun-clb"
+	provider "certimate/internal/pkg/core/deployer/providers/aliyun-clb"
 )
 
 var (

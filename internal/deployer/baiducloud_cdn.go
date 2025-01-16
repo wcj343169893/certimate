@@ -10,7 +10,7 @@ import (
 	bceCdnApi "github.com/baidubce/bce-sdk-go/services/cdn/api"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/domain"
+	"certimate/internal/domain"
 )
 
 type BaiduCloudCDNDeployer struct {

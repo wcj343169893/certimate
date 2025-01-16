@@ -1,4 +1,4 @@
-﻿package aliyuncdn
+package aliyuncdn
 
 import (
 	"context"
@@ -11,7 +11,7 @@ import (
 	"github.com/alibabacloud-go/tea/tea"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/deployer"
 )
 
 type AliyunCDNDeployerConfig struct {

@@ -1,4 +1,4 @@
-﻿package tencentcloudssl
+package tencentcloudssl
 
 import (
 	"context"
@@ -9,7 +9,7 @@ import (
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/profile"
 	tcSsl "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/ssl/v20191205"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
+	"certimate/internal/pkg/core/uploader"
 )
 
 type TencentCloudSSLUploaderConfig struct {

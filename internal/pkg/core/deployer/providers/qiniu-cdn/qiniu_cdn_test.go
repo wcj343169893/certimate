@@ -1,4 +1,4 @@
-﻿package qiniucdn_test
+package qiniucdn_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/qiniu-cdn"
+	provider "certimate/internal/pkg/core/deployer/providers/qiniu-cdn"
 )
 
 var (

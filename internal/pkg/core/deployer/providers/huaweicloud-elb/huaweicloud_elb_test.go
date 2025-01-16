@@ -1,4 +1,4 @@
-﻿package huaweicloudelb_test
+package huaweicloudelb_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/huaweicloud-elb"
+	provider "certimate/internal/pkg/core/deployer/providers/huaweicloud-elb"
 )
 
 var (

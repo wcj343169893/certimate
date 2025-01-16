@@ -1,4 +1,4 @@
-﻿package qiniusslcert
+package qiniusslcert
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	xerrors "github.com/pkg/errors"
 	"github.com/qiniu/go-sdk/v7/auth"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
-	qiniuEx "github.com/usual2970/certimate/internal/pkg/vendors/qiniu-sdk"
+	"certimate/internal/pkg/core/uploader"
+	"certimate/internal/pkg/utils/x509"
+	qiniuEx "certimate/internal/pkg/vendors/qiniu-sdk"
 )
 
 type QiniuSSLCertUploaderConfig struct {

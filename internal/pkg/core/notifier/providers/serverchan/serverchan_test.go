@@ -1,4 +1,4 @@
-﻿package serverchan_test
+package serverchan_test
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/serverchan"
+	provider "certimate/internal/pkg/core/notifier/providers/serverchan"
 )
 
 const (

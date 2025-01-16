@@ -8,9 +8,9 @@ import (
 
 	"github.com/pocketbase/pocketbase/models"
 
-	"github.com/usual2970/certimate/internal/applicant"
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/utils/app"
+	"certimate/internal/applicant"
+	"certimate/internal/domain"
+	"certimate/internal/utils/app"
 )
 
 const (

@@ -14,8 +14,8 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type K8sSecretDeployer struct {

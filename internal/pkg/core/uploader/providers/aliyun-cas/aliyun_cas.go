@@ -1,4 +1,4 @@
-﻿package aliyuncas
+package aliyuncas
 
 import (
 	"context"
@@ -12,8 +12,8 @@ import (
 	"github.com/alibabacloud-go/tea/tea"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/core/uploader"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type AliyunCASUploaderConfig struct {

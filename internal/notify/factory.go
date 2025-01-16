@@ -3,16 +3,16 @@ package notify
 import (
 	"fmt"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/notifier"
-	providerBark "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/bark"
-	providerDingTalk "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/dingtalk"
-	providerEmail "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/email"
-	providerLark "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/lark"
-	providerServerChan "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/serverchan"
-	providerTelegram "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/telegram"
-	providerWebhook "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/webhook"
-	"github.com/usual2970/certimate/internal/pkg/utils/maps"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/notifier"
+	providerBark "certimate/internal/pkg/core/notifier/providers/bark"
+	providerDingTalk "certimate/internal/pkg/core/notifier/providers/dingtalk"
+	providerEmail "certimate/internal/pkg/core/notifier/providers/email"
+	providerLark "certimate/internal/pkg/core/notifier/providers/lark"
+	providerServerChan "certimate/internal/pkg/core/notifier/providers/serverchan"
+	providerTelegram "certimate/internal/pkg/core/notifier/providers/telegram"
+	providerWebhook "certimate/internal/pkg/core/notifier/providers/webhook"
+	"certimate/internal/pkg/utils/maps"
 )
 
 func createNotifier(channel string, channelConfig map[string]any) (notifier.Notifier, error) {

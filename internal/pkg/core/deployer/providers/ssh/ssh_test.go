@@ -1,4 +1,4 @@
-﻿package ssh_test
+package ssh_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/ssh"
+	provider "certimate/internal/pkg/core/deployer/providers/ssh"
 )
 
 var (

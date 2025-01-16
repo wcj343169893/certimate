@@ -10,8 +10,8 @@ import (
 
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/utils/fs"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/utils/fs"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type LocalDeployer struct {

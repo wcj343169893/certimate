@@ -1,4 +1,4 @@
-﻿package aliyunslb
+package aliyunslb
 
 import (
 	"context"
@@ -15,8 +15,8 @@ import (
 	"github.com/alibabacloud-go/tea/tea"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/core/uploader"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type AliyunSLBUploaderConfig struct {
@@ -91,7 +91,7 @@ func (u *AliyunSLBUploader) Upload(ctx context.Context, certPem string, privkeyP
 	certName = fmt.Sprintf("certimate_%d", time.Now().UnixMilli())
 
 	// 去除证书和私钥内容中的空白行，以符合阿里云 API 要求
-	// REF: https://github.com/usual2970/certimate/issues/326
+	// REF: https://certimate/issues/326
 	re := regexp.MustCompile(`(?m)^\s*$\n?`)
 	certPem = strings.TrimSpace(re.ReplaceAllString(certPem, ""))
 	privkeyPem = strings.TrimSpace(re.ReplaceAllString(privkeyPem, ""))

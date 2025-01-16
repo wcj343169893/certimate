@@ -6,12 +6,13 @@ import (
 	"fmt"
 	"strings"
 
-	bytepluscdn "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/byteplus-cdn"
+	bytepluscdn "certimate/internal/pkg/core/uploader/providers/byteplus-cdn"
+
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
 
 	"github.com/byteplus-sdk/byteplus-sdk-golang/service/cdn"
 	xerrors "github.com/pkg/errors"
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
 )
 
 type ByteplusCDNDeployer struct {

@@ -1,4 +1,4 @@
-﻿package email
+package email
 
 import (
 	"context"
@@ -9,7 +9,7 @@ import (
 
 	"github.com/domodwyer/mailyak/v3"
 
-	"github.com/usual2970/certimate/internal/pkg/core/notifier"
+	"certimate/internal/pkg/core/notifier"
 )
 
 type EmailNotifierConfig struct {

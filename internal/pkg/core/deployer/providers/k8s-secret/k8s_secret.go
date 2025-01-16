@@ -12,8 +12,8 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type K8sSecretDeployerConfig struct {

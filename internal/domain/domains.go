@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/usual2970/certimate/internal/pkg/utils/maps"
+	"certimate/internal/pkg/utils/maps"
 )
 
 type ApplyConfig struct {

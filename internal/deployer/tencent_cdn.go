@@ -13,9 +13,9 @@ import (
 	tcSsl "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/ssl/v20191205"
 	"golang.org/x/exp/slices"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	uploaderTcSsl "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/tencentcloud-ssl"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
+	uploaderTcSsl "certimate/internal/pkg/core/uploader/providers/tencentcloud-ssl"
 )
 
 type TencentCDNDeployer struct {

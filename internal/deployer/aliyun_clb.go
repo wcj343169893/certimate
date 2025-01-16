@@ -11,9 +11,9 @@ import (
 	"github.com/alibabacloud-go/tea/tea"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	uploaderAliyunSlb "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/aliyun-slb"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
+	uploaderAliyunSlb "certimate/internal/pkg/core/uploader/providers/aliyun-slb"
 )
 
 type AliyunCLBDeployer struct {

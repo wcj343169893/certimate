@@ -1,4 +1,4 @@
-﻿package bytepluscdn
+package bytepluscdn
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	bpCdn "github.com/byteplus-sdk/byteplus-sdk-golang/service/cdn"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerCdn "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/byteplus-cdn"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerCdn "certimate/internal/pkg/core/uploader/providers/byteplus-cdn"
 )
 
 type BytePlusCDNDeployerConfig struct {

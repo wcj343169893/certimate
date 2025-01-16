@@ -9,10 +9,10 @@ import (
 	xerrors "github.com/pkg/errors"
 	"github.com/qiniu/go-sdk/v7/auth"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	uploaderQiniu "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/qiniu-sslcert"
-	qiniuEx "github.com/usual2970/certimate/internal/pkg/vendors/qiniu-sdk"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
+	uploaderQiniu "certimate/internal/pkg/core/uploader/providers/qiniu-sslcert"
+	qiniuEx "certimate/internal/pkg/vendors/qiniu-sdk"
 )
 
 type QiniuCDNDeployer struct {

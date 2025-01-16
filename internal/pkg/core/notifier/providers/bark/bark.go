@@ -1,4 +1,4 @@
-﻿package bark
+package bark
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"github.com/nikoksr/notify"
 	"github.com/nikoksr/notify/service/bark"
 
-	"github.com/usual2970/certimate/internal/pkg/core/notifier"
+	"certimate/internal/pkg/core/notifier"
 )
 
 type BarkNotifierConfig struct {
