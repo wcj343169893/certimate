@@ -17,9 +17,12 @@ export default function LocaleToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {Object.keys(i18n.store.data).map((key) => (
-          <DropdownMenuItem onClick={() => i18n.changeLanguage(key)}>{i18n.store.data[key].name as string}</DropdownMenuItem>
+          <DropdownMenuItem key={key} onClick={() => i18n.changeLanguage(key)}>
+            {i18n.store.data[key].name as string}
+          </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
 }
+

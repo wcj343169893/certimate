@@ -21,12 +21,19 @@ const formSchema = z.object({
 
 const Login = () => {
   const { t } = useTranslation();
+  //测试环境默认账户密码
+  let defaultUsername = "";
+  let defaultPassword = "";
+  if (process.env.NODE_ENV === "development") {
+    defaultUsername = "admin@certimate.fun";
+    defaultPassword = "1234567890";
+  }
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
-      password: "",
+      username: defaultUsername,
+      password: defaultPassword,
     },
   });
 
@@ -89,3 +96,4 @@ const Login = () => {
 };
 
 export default Login;
+
