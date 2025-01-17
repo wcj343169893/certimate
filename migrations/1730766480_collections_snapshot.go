@@ -190,6 +190,7 @@ func init() {
 								"aliyun-dcdn",
 								"ssh",
 								"webhook",
+								"unicloud",
 								"tencent-cdn",
 								"qiniu-cdn",
 								"local"
@@ -408,6 +409,7 @@ func init() {
 								"local",
 								"ssh",
 								"webhook",
+								"unicloud",
 								"k8s",
 								"baiducloud",
 								"dogecloud"

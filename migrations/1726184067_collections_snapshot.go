@@ -189,6 +189,7 @@ func init() {
 								"aliyun-cdn",
 								"ssh",
 								"webhook",
+								"unicloud",
 								"tencent-cdn",
 								"qiniu-cdn"
 							]
@@ -329,6 +330,7 @@ func init() {
 								"tencent",
 								"ssh",
 								"webhook",
+								"unicloud",
 								"cloudflare",
 								"qiniu",
 								"namesilo",
