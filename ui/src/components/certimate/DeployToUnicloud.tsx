@@ -38,7 +38,7 @@ const DeployToUnicloud = () => {
     <>
       <div className="flex flex-col space-y-8">
         <div>
-          <Label>{t("Space ID")}</Label>
+          <Label>{t("domain.deployment.form.unicloud.space_id")}</Label>
           <Input
             value={config?.config?.spaceId}
             onChange={(e) => {
@@ -51,7 +51,7 @@ const DeployToUnicloud = () => {
         </div>
 
         <div>
-          <Label>{t("Provider")}</Label>
+          <Label>{t("domain.deployment.form.unicloud.provider")}</Label>
           <Select
             value={config?.config?.provider}
             onValueChange={(value) => {
@@ -62,12 +62,12 @@ const DeployToUnicloud = () => {
             }}
           >
             <SelectTrigger>
-              <SelectValue />
+              <SelectValue placeholder={t("domain.deployment.form.unicloud.provider.placeholder")} />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="aliyun">阿里云</SelectItem>
-                <SelectItem value="tencent">腾讯云</SelectItem>
+                <SelectItem value="aliyun">{t("domain.deployment.form.unicloud.provider.aliyun")}</SelectItem>
+                <SelectItem value="tencent">{t("domain.deployment.form.unicloud.provider.tencent")}</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

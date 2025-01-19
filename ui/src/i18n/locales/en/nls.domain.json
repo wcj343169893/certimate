@@ -171,5 +171,10 @@
   "domain.deployment.form.variables.key.required": "Variable name cannot be empty",
   "domain.deployment.form.variables.value.required": "Variable value cannot be empty",
   "domain.deployment.form.variables.key.placeholder": "Variable name",
-  "domain.deployment.form.variables.value.placeholder": "Variable value"
+  "domain.deployment.form.variables.value.placeholder": "Variable value",
+  "domain.deployment.form.unicloud.space_id": "Space ID",
+  "domain.deployment.form.unicloud.provider": "Provider",
+  "domain.deployment.form.unicloud.provider.aliyun": "Aliyun",
+  "domain.deployment.form.unicloud.provider.tencent": "Tencent",
+  "domain.deployment.form.unicloud.provider.placeholder": "Please select provider"
 }

@@ -169,5 +169,10 @@
   "domain.deployment.form.variables.key.required": "变量名不能为空",
   "domain.deployment.form.variables.value.required": "变量值不能为空",
   "domain.deployment.form.variables.key.placeholder": "请输入变量名",
-  "domain.deployment.form.variables.value.placeholder": "请输入变量值"
+  "domain.deployment.form.variables.value.placeholder": "请输入变量值",
+  "domain.deployment.form.unicloud.space_id": "空间ID",
+  "domain.deployment.form.unicloud.provider": "供应商",
+  "domain.deployment.form.unicloud.provider.aliyun": "阿里云",
+  "domain.deployment.form.unicloud.provider.tencent": "腾讯云",
+  "domain.deployment.form.unicloud.provider.placeholder": "请选择供应商"
 }

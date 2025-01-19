@@ -50,6 +50,19 @@ mkdir -p ~/.certimate && cd ~/.certimate && curl -O https://raw.githubuserconten
 
 ```
 
+#### docker 编译并启动
+
+```bash
+cd docker
+docker compose up --build
+```
+
+##### docker 直接启动
+
+```bash
+docker compose up -d
+```
+
 ### 3. 源代码安装
 
 ```bash
@@ -58,12 +71,14 @@ cd certimate
 make local.run
 ```
 
-go mod vendor&& npm --prefix=./ui install && npm --prefix=./ui run build && go run main.go serve --http 127.0.0.1:8090
+#### 单步运行
 
+```bash
 go mod vendor
 npm --prefix=./ui install
 npm --prefix=./ui run build
 go run main.go serve --http 127.0.0.1:8090
+```
 
 ## 二、使用
 
@@ -96,6 +111,7 @@ go run main.go serve --http 127.0.0.1:8090
 |  本地部署  |              |      √       | 可部署到本地服务器                                                |
 |    SSH     |              |      √       | 可部署到 SSH 服务器                                               |
 |  Webhook   |              |      √       | 可部署时回调到 Webhook                                            |
+|  Unicloud  |              |      √       | 可部署到 Unicloud                                                 |
 | Kubernetes |              |      √       | 可部署到 Kubernetes Secret                                        |
 
 ## 四、系统截图
@@ -196,4 +212,3 @@ Certimate 是一个免费且开源的项目，采用 [MIT 开源协议](LICENSE.
 ## 十、Star 趋势图
 
 [![Stargazers over time](https://starchart.cc/usual2970/certimate.svg?variant=adaptive)](https://starchart.cc/usual2970/certimate)
-

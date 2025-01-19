@@ -1,7 +1,8 @@
 version: "3.0"
 services:
   certimate:
-    image: registry.cn-shanghai.aliyuncs.com/usual2970/certimate:latest
+    build: ../
+    image: registry.cn-hangzhou.aliyuncs.com/hugobee/https_certimate:latest
     container_name: certimate_server
     ports:
       - 8090:8090
