@@ -11,11 +11,11 @@ import (
 	hcCdnRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/region"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	uploaderHcScm "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/huaweicloud-scm"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
-	hcCdnEx "github.com/usual2970/certimate/internal/pkg/vendors/huaweicloud-cdn-sdk"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
+	uploaderHcScm "certimate/internal/pkg/core/uploader/providers/huaweicloud-scm"
+	"certimate/internal/pkg/utils/cast"
+	hcCdnEx "certimate/internal/pkg/vendors/huaweicloud-cdn-sdk"
 )
 
 type HuaweiCloudCDNDeployer struct {

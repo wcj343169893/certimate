@@ -1,4 +1,4 @@
-﻿package k8ssecret_test
+package k8ssecret_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/k8s-secret"
+	provider "certimate/internal/pkg/core/deployer/providers/k8s-secret"
 )
 
 var (

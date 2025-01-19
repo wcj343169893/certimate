@@ -11,10 +11,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
-	"github.com/usual2970/certimate/internal/repository"
-	"github.com/usual2970/certimate/internal/utils/app"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/utils/x509"
+	"certimate/internal/repository"
+	"certimate/internal/utils/app"
 
 	"github.com/go-acme/lego/v4/certcrypto"
 	"github.com/go-acme/lego/v4/certificate"

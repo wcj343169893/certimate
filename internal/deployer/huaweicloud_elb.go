@@ -17,10 +17,10 @@ import (
 	xerrors "github.com/pkg/errors"
 	"golang.org/x/exp/slices"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	uploaderHcElb "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/huaweicloud-elb"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
+	uploaderHcElb "certimate/internal/pkg/core/uploader/providers/huaweicloud-elb"
+	"certimate/internal/pkg/utils/cast"
 )
 
 type HuaweiCloudELBDeployer struct {

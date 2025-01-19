@@ -8,8 +8,8 @@ import (
 	"github.com/pocketbase/dbx"
 	"github.com/pocketbase/pocketbase/models"
 
-	"github.com/usual2970/certimate/internal/utils/app"
-	"github.com/usual2970/certimate/internal/utils/xtime"
+	"certimate/internal/utils/app"
+	"certimate/internal/utils/xtime"
 )
 
 const (

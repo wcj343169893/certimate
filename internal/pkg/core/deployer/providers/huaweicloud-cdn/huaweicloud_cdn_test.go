@@ -1,4 +1,4 @@
-﻿package huaweicloudcdn_test
+package huaweicloudcdn_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/huaweicloud-cdn"
+	provider "certimate/internal/pkg/core/deployer/providers/huaweicloud-cdn"
 )
 
 var (

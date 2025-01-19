@@ -1,4 +1,4 @@
-﻿package local_test
+package local_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/local"
+	provider "certimate/internal/pkg/core/deployer/providers/local"
 )
 
 var (

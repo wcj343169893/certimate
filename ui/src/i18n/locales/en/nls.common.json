@@ -83,6 +83,7 @@
   "common.provider.local": "Local Deployment",
   "common.provider.ssh": "SSH Deployment",
   "common.provider.webhook": "Webhook",
+  "common.provider.unicloud": "Unicloud",
   "common.provider.kubernetes": "Kubernetes",
   "common.provider.kubernetes.secret": "Kubernetes - Secret",
   "common.provider.email": "Email",
@@ -97,3 +98,4 @@
   "common.provider.byteplus": "BytePlus",
   "common.provider.byteplus.cdn": "BytePlus - CDN"
 }
+

@@ -1,4 +1,4 @@
-﻿package huaweicloudelb
+package huaweicloudelb
 
 import (
 	"context"
@@ -16,10 +16,10 @@ import (
 	xerrors "github.com/pkg/errors"
 	"golang.org/x/exp/slices"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerElb "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/huaweicloud-elb"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerElb "certimate/internal/pkg/core/uploader/providers/huaweicloud-elb"
+	"certimate/internal/pkg/utils/cast"
 )
 
 type HuaweiCloudELBDeployerConfig struct {

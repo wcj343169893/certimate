@@ -1,4 +1,4 @@
-﻿package tencentcloudclb
+package tencentcloudclb
 
 import (
 	"context"
@@ -11,9 +11,9 @@ import (
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/profile"
 	tcSsl "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/ssl/v20191205"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerSsl "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/tencentcloud-ssl"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerSsl "certimate/internal/pkg/core/uploader/providers/tencentcloud-ssl"
 )
 
 type TencentCloudCLBDeployerConfig struct {

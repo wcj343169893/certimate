@@ -12,8 +12,8 @@ import (
 	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type SshDeployerConfig struct {

@@ -1,4 +1,4 @@
-﻿package dogecloud
+package dogecloud
 
 import (
 	"context"
@@ -8,8 +8,8 @@ import (
 
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	doge "github.com/usual2970/certimate/internal/pkg/vendors/dogecloud-sdk"
+	"certimate/internal/pkg/core/uploader"
+	doge "certimate/internal/pkg/vendors/dogecloud-sdk"
 )
 
 type DogeCloudUploaderConfig struct {

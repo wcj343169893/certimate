@@ -1,4 +1,4 @@
-﻿package dingtalk_test
+package dingtalk_test
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/dingtalk"
+	provider "certimate/internal/pkg/core/notifier/providers/dingtalk"
 )
 
 const (

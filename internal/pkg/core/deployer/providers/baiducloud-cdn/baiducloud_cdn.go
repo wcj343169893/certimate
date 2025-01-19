@@ -1,4 +1,4 @@
-﻿package baiducloudcdn
+package baiducloudcdn
 
 import (
 	"context"
@@ -10,7 +10,7 @@ import (
 	bceCdnApi "github.com/baidubce/bce-sdk-go/services/cdn/api"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/deployer"
 )
 
 type BaiduCloudCDNDeployerConfig struct {

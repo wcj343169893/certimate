@@ -29,6 +29,7 @@ export const accessProvidersMap: Map<AccessProvider["type"], AccessProvider> = n
     ["local", "common.provider.local", "/imgs/providers/local.svg", "deploy", "local:bendi:本地"],
     ["ssh", "common.provider.ssh", "/imgs/providers/ssh.svg", "deploy", "ssh"],
     ["webhook", "common.provider.webhook", "/imgs/providers/webhook.svg", "deploy", "webhook"],
+    ["unicloud", "common.provider.unicloud", "/imgs/providers/unicloud.svg", "deploy", "unicloud"],
     ["k8s", "common.provider.kubernetes", "/imgs/providers/k8s.svg", "deploy", "k8s:kubernetes"],
   ].map(([type, name, icon, usage, searchContent]) => [type, { type, name, icon, usage: usage as AccessUsages, searchContent: searchContent }])
 );
@@ -50,6 +51,7 @@ export const accessTypeFormSchema = z.union(
     z.literal("local"),
     z.literal("ssh"),
     z.literal("webhook"),
+    z.literal("unicloud"),
     z.literal("k8s"),
     z.literal("volcengine"),
     z.literal("byteplus"),
@@ -78,6 +80,7 @@ export type Access = {
     | LocalConfig
     | SSHConfig
     | WebhookConfig
+    | UnicloudConfig
     | KubernetesConfig
     | VolcengineConfig
     | ByteplusConfig;
@@ -165,6 +168,11 @@ export type WebhookConfig = {
   url: string;
 };
 
+export type UnicloudConfig = {
+  username: string;
+  password: string;
+};
+
 export type KubernetesConfig = {
   kubeConfig: string;
 };
@@ -178,3 +186,4 @@ export type ByteplusConfig = {
   accessKey: string;
   secretKey: string;
 };
+

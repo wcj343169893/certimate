@@ -1,4 +1,4 @@
-﻿package aliyunoss
+package aliyunoss
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/deployer"
 )
 
 type AliyunOSSDeployerConfig struct {

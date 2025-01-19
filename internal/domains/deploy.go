@@ -12,12 +12,12 @@ import (
 
 	"golang.org/x/exp/slices"
 
-	"github.com/usual2970/certimate/internal/applicant"
-	"github.com/usual2970/certimate/internal/deployer"
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/utils/app"
+	"certimate/internal/applicant"
+	"certimate/internal/deployer"
+	"certimate/internal/domain"
+	"certimate/internal/utils/app"
 
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type Phase string

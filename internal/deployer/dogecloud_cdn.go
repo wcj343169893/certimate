@@ -8,10 +8,10 @@ import (
 
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/domain"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	uploaderDoge "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/dogecloud"
-	doge "github.com/usual2970/certimate/internal/pkg/vendors/dogecloud-sdk"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/core/uploader"
+	uploaderDoge "certimate/internal/pkg/core/uploader/providers/dogecloud"
+	doge "certimate/internal/pkg/vendors/dogecloud-sdk"
 )
 
 type DogeCloudCDNDeployer struct {

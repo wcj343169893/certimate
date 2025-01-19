@@ -7,7 +7,7 @@ import (
 
 	huaweicloudProvider "github.com/go-acme/lego/v4/providers/dns/huaweicloud"
 
-	"github.com/usual2970/certimate/internal/domain"
+	"certimate/internal/domain"
 )
 
 type huaweicloud struct {

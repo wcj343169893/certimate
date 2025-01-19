@@ -9,7 +9,7 @@ import (
 	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/domain"
+	"certimate/internal/domain"
 )
 
 type AliyunOSSDeployer struct {

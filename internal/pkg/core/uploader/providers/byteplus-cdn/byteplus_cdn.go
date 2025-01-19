@@ -13,9 +13,9 @@ import (
 	bpCdn "github.com/byteplus-sdk/byteplus-sdk-golang/service/cdn"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/core/uploader"
+	"certimate/internal/pkg/utils/cast"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type ByteplusCDNUploaderConfig struct {

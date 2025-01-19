@@ -1,4 +1,4 @@
-﻿package qiniucdn
+package qiniucdn
 
 import (
 	"context"
@@ -8,10 +8,10 @@ import (
 	xerrors "github.com/pkg/errors"
 	"github.com/qiniu/go-sdk/v7/auth"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerQiniu "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/qiniu-sslcert"
-	qiniusdk "github.com/usual2970/certimate/internal/pkg/vendors/qiniu-sdk"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerQiniu "certimate/internal/pkg/core/uploader/providers/qiniu-sslcert"
+	qiniusdk "certimate/internal/pkg/vendors/qiniu-sdk"
 )
 
 type QiniuCDNDeployerConfig struct {

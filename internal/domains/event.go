@@ -3,7 +3,7 @@ package domains
 import (
 	"github.com/pocketbase/pocketbase/core"
 
-	"github.com/usual2970/certimate/internal/utils/app"
+	"certimate/internal/utils/app"
 )
 
 const tableName = "domains"

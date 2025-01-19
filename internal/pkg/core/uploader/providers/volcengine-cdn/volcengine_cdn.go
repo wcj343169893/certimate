@@ -13,9 +13,9 @@ import (
 	xerrors "github.com/pkg/errors"
 	veCdn "github.com/volcengine/volc-sdk-golang/service/cdn"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/core/uploader"
+	"certimate/internal/pkg/utils/cast"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type VolcEngineCDNUploaderConfig struct {

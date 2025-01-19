@@ -1,4 +1,4 @@
-﻿package tencentcloudecdn_test
+package tencentcloudecdn_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/tencentcloud-ecdn"
+	provider "certimate/internal/pkg/core/deployer/providers/tencentcloud-ecdn"
 )
 
 var (

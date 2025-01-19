@@ -1,4 +1,4 @@
-﻿package bark_test
+package bark_test
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/bark"
+	provider "certimate/internal/pkg/core/notifier/providers/bark"
 )
 
 const (

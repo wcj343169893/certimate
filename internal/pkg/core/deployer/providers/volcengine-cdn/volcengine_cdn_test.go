@@ -1,4 +1,4 @@
-﻿package volcenginecdn_test
+package volcenginecdn_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/volcengine-cdn"
+	provider "certimate/internal/pkg/core/deployer/providers/volcengine-cdn"
 )
 
 var (

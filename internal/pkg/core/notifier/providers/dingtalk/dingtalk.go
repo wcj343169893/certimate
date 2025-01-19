@@ -1,4 +1,4 @@
-﻿package dingtalk
+package dingtalk
 
 import (
 	"context"
@@ -6,7 +6,7 @@ import (
 
 	"github.com/nikoksr/notify/service/dingding"
 
-	"github.com/usual2970/certimate/internal/pkg/core/notifier"
+	"certimate/internal/pkg/core/notifier"
 )
 
 type DingTalkNotifierConfig struct {

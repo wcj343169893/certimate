@@ -1,4 +1,4 @@
-﻿package dogecloudcdn_test
+package dogecloudcdn_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/dogecloud-cdn"
+	provider "certimate/internal/pkg/core/deployer/providers/dogecloud-cdn"
 )
 
 var (

@@ -1,4 +1,4 @@
-﻿package huaweicloudcdn
+package huaweicloudcdn
 
 import (
 	"context"
@@ -10,11 +10,11 @@ import (
 	hcCdnRegion "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/region"
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerScm "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/huaweicloud-scm"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
-	huaweicloudsdk "github.com/usual2970/certimate/internal/pkg/vendors/huaweicloud-cdn-sdk"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerScm "certimate/internal/pkg/core/uploader/providers/huaweicloud-scm"
+	"certimate/internal/pkg/utils/cast"
+	huaweicloudsdk "certimate/internal/pkg/vendors/huaweicloud-cdn-sdk"
 )
 
 type HuaweiCloudCDNDeployerConfig struct {

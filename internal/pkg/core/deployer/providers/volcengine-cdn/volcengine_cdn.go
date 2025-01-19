@@ -1,4 +1,4 @@
-﻿package volcenginecdn
+package volcenginecdn
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	xerrors "github.com/pkg/errors"
 	veCdn "github.com/volcengine/volc-sdk-golang/service/cdn"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerCdn "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/volcengine-cdn"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerCdn "certimate/internal/pkg/core/uploader/providers/volcengine-cdn"
 )
 
 type VolcEngineCDNDeployerConfig struct {

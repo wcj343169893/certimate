@@ -1,4 +1,4 @@
-﻿package dogecloudcdn
+package dogecloudcdn
 
 import (
 	"context"
@@ -7,10 +7,10 @@ import (
 
 	xerrors "github.com/pkg/errors"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerDoge "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/dogecloud"
-	dogesdk "github.com/usual2970/certimate/internal/pkg/vendors/dogecloud-sdk"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerDoge "certimate/internal/pkg/core/uploader/providers/dogecloud"
+	dogesdk "certimate/internal/pkg/vendors/dogecloud-sdk"
 )
 
 type DogeCloudCDNDeployerConfig struct {

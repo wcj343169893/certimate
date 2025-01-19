@@ -44,6 +44,7 @@ func init() {
 					"local",
 					"ssh",
 					"webhook",
+					"unicloud",
 					"k8s",
 					"baiducloud",
 					"dogecloud",
@@ -90,6 +91,7 @@ func init() {
 					"local",
 					"ssh",
 					"webhook",
+					"unicloud",
 					"k8s",
 					"baiducloud",
 					"dogecloud"

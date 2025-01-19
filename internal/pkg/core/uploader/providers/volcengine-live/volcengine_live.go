@@ -10,9 +10,9 @@ import (
 	xerrors "github.com/pkg/errors"
 	veLive "github.com/volcengine/volc-sdk-golang/service/live/v20230101"
 
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
-	"github.com/usual2970/certimate/internal/pkg/utils/x509"
+	"certimate/internal/pkg/core/uploader"
+	"certimate/internal/pkg/utils/cast"
+	"certimate/internal/pkg/utils/x509"
 )
 
 type VolcEngineLiveUploaderConfig struct {

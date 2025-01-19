@@ -1,4 +1,4 @@
-﻿package email_test
+package email_test
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/notifier/providers/email"
+	provider "certimate/internal/pkg/core/notifier/providers/email"
 )
 
 const (

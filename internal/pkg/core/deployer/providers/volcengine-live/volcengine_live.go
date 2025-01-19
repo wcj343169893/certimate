@@ -1,4 +1,4 @@
-﻿package volcenginelive
+package volcenginelive
 
 import (
 	"context"
@@ -9,10 +9,10 @@ import (
 	xerrors "github.com/pkg/errors"
 	veLive "github.com/volcengine/volc-sdk-golang/service/live/v20230101"
 
-	"github.com/usual2970/certimate/internal/pkg/core/deployer"
-	"github.com/usual2970/certimate/internal/pkg/core/uploader"
-	providerLive "github.com/usual2970/certimate/internal/pkg/core/uploader/providers/volcengine-live"
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
+	"certimate/internal/pkg/core/deployer"
+	"certimate/internal/pkg/core/uploader"
+	providerLive "certimate/internal/pkg/core/uploader/providers/volcengine-live"
+	"certimate/internal/pkg/utils/cast"
 )
 
 type VolcEngineLiveDeployerConfig struct {

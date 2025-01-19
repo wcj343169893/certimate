@@ -1,9 +1,9 @@
-﻿package huaweicloudcdnsdk
+package huaweicloudcdnsdk
 
 import (
 	hcCdnModel "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/cdn/v2/model"
 
-	"github.com/usual2970/certimate/internal/pkg/utils/cast"
+	"certimate/internal/pkg/utils/cast"
 )
 
 type UpdateDomainMultiCertificatesExRequestBodyContent struct {

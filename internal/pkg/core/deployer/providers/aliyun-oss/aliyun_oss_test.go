@@ -1,4 +1,4 @@
-﻿package aliyunoss_test
+package aliyunoss_test
 
 import (
 	"context"
@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	provider "github.com/usual2970/certimate/internal/pkg/core/deployer/providers/aliyun-oss"
+	provider "certimate/internal/pkg/core/deployer/providers/aliyun-oss"
 )
 
 var (
