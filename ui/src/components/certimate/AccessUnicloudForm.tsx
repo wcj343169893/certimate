@@ -27,12 +27,12 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
       .string()
       .min(1, "access.authorization.form.username.placeholder")
       .max(64, t("common.errmsg.string_max", { max: 64 })),
-    password: z.string().min(1, "access.authorization.form.password.placeholder"),
+    token: z.string().min(1, "access.authorization.form.token.placeholder"),
   });
 
   let config: UnicloudConfig = {
     username: "",
-    password: "",
+    token: "",
   };
   if (data) config = data.config as UnicloudConfig;
 
@@ -41,7 +41,7 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
     defaultValues: {
       id: data?.id,
       username: config.username,
-      password: config.password,
+      token: config.token,
     },
   });
 
@@ -53,7 +53,7 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
       usage: accessProvidersMap.get("unicloud")!.usage,
       config: {
         username: data.username,
-        password: data.password,
+        token: data.token,
       },
     };
 
@@ -110,12 +110,12 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
 
           <FormField
             control={form.control}
-            name="password"
+            name="token"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t("access.authorization.form.password.label")}</FormLabel>
+                <FormLabel>{t("access.authorization.form.token.label")}</FormLabel>
                 <FormControl>
-                  <Input type="password" placeholder={t("access.authorization.form.password.placeholder")} {...field} />
+                  <Input type="text" placeholder={t("access.authorization.form.password.placeholder")} {...field} />
                 </FormControl>
 
                 <FormMessage />

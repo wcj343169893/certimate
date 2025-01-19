@@ -201,7 +201,7 @@ const Home = () => {
                 className="flex flex-col sm:flex-row text-secondary-foreground border-b  dark:border-stone-500 sm:p-2 hover:bg-muted/50 text-sm"
                 key={domain.id}
               >
-                <div className="sm:w-36 w-full pt-1 sm:pt-0 flex flex-col items-start">
+                <div className="sm:w-36 w-full pt-1 sm:pt-0 flex flex-col items-center">
                   {domain.domain.split(";").map((domain: string, index: number) => (
                     <div className="pr-3 truncate w-full" key={index}>
                       {domain}
@@ -339,4 +339,3 @@ const Home = () => {
 };
 
 export default Home;
-

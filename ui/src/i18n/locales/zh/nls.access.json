@@ -54,6 +54,8 @@
   "access.authorization.form.username.placeholder": "请输入用户名",
   "access.authorization.form.password.label": "密码",
   "access.authorization.form.password.placeholder": "请输入密码",
+  "access.authorization.form.token.label": "密钥",
+  "access.authorization.form.token.placeholder": "请输入密钥",
   "access.authorization.form.access_group.placeholder": "请选择分组",
   "access.authorization.form.ssh_group.label": "授权配置组（用于将一个域名证书部署到多个 SSH 主机）",
   "access.authorization.form.ssh_host.label": "服务器 Host",
@@ -90,4 +92,3 @@
   "access.group.domains": "所有授权",
   "access.group.domains.nodata": "请添加域名开始部署证书吧。"
 }
-

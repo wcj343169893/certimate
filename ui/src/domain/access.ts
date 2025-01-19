@@ -170,7 +170,7 @@ export type WebhookConfig = {
 
 export type UnicloudConfig = {
   username: string;
-  password: string;
+  token: string;
 };
 
 export type KubernetesConfig = {
@@ -186,4 +186,3 @@ export type ByteplusConfig = {
   accessKey: string;
   secretKey: string;
 };
-

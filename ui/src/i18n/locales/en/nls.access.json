@@ -54,6 +54,8 @@
   "access.authorization.form.username.placeholder": "Please enter username",
   "access.authorization.form.password.label": "Password",
   "access.authorization.form.password.placeholder": "Please enter password",
+  "access.authorization.form.token.label": "Token",
+  "access.authorization.form.token.placeholder": "Please enter token",
   "access.authorization.form.access_group.placeholder": "Please select a group",
   "access.authorization.form.ssh_group.label": "Authorization Configuration Group (used to deploy a single domain certificate to multiple SSH hosts)",
   "access.authorization.form.ssh_host.label": "Server Host",
@@ -90,4 +92,3 @@
   "access.group.domains": "All Authorizations",
   "access.group.domains.nodata": "Please add a domain to start deploying the certificate."
 }
-

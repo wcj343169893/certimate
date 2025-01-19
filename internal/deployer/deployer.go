@@ -36,6 +36,7 @@ const (
 	targetLocal          = "local"
 	targetSSH            = "ssh"
 	targetWebhook        = "webhook"
+	targetUnicloud       = "unicloud"
 	targetK8sSecret      = "k8s-secret"
 )
 
@@ -145,6 +146,8 @@ func getWithDeployConfig(record *models.Record, cert *applicant.Certificate, dep
 		return NewSSHDeployer(option)
 	case targetWebhook:
 		return NewWebhookDeployer(option)
+	case targetUnicloud:
+		return NewUnicloudDeployer(option)
 	case targetK8sSecret:
 		return NewK8sSecretDeployer(option)
 	case targetVolcEngineLive:

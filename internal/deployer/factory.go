@@ -3,6 +3,7 @@ package deployer
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"strconv"
 
 	"certimate/internal/domain"
@@ -27,6 +28,7 @@ import (
 	providerTencentCloudCos "certimate/internal/pkg/core/deployer/providers/tencentcloud-cos"
 	providerTencentCloudEcdn "certimate/internal/pkg/core/deployer/providers/tencentcloud-ecdn"
 	providerTencentCloudTeo "certimate/internal/pkg/core/deployer/providers/tencentcloud-teo"
+	providerUnicloud "certimate/internal/pkg/core/deployer/providers/unicloud"
 	providerVolcEngineCdn "certimate/internal/pkg/core/deployer/providers/volcengine-cdn"
 	providerVolcEngineLive "certimate/internal/pkg/core/deployer/providers/volcengine-live"
 	providerWebhook "certimate/internal/pkg/core/deployer/providers/webhook"
@@ -365,6 +367,22 @@ func createDeployer(target string, accessConfig string, deployConfig map[string]
 			deployer, err := providerWebhook.NewWithLogger(&providerWebhook.WebhookDeployerConfig{
 				Url:       access.Url,
 				Variables: nil, // TODO: 尚未实现
+			}, logger)
+			return deployer, logger, err
+		}
+	case targetUnicloud:
+		{
+			log.Println("accessConfig", accessConfig)
+			access := &domain.UnicloudAccess{}
+			if err := json.Unmarshal([]byte(accessConfig), access); err != nil {
+				return nil, nil, fmt.Errorf("failed to unmarshal access config: %w", err)
+			}
+			log.Println("deployConfig", deployConfig)
+			deployer, err := providerUnicloud.NewWithLogger(&providerUnicloud.UnicloudDeployerConfig{
+				Token:    access.Token,
+				SpaceId:  maps.GetValueAsString(deployConfig, "spaceId"),
+				Provider: maps.GetValueAsString(deployConfig, "provider"),
+				Domain:   maps.GetValueAsString(deployConfig, "domain"),
 			}, logger)
 			return deployer, logger, err
 		}
