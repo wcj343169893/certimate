@@ -30,7 +30,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            hugobee/certimate
+            wcj343169893/certimate
             registry.cn-hangzhou.aliyuncs.com/hugobee/certimate
 
       - name: Log in to DOCKERHUB
