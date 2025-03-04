@@ -28,11 +28,13 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
       .min(1, "access.authorization.form.username.placeholder")
       .max(64, t("common.errmsg.string_max", { max: 64 })),
     token: z.string().min(1, "access.authorization.form.token.placeholder"),
+    password: z.string().min(1, "access.authorization.form.password.placeholder"),
   });
 
   let config: UnicloudConfig = {
     username: "",
     token: "",
+    password: "",
   };
   if (data) config = data.config as UnicloudConfig;
 
@@ -42,6 +44,7 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
       id: data?.id,
       username: config.username,
       token: config.token,
+      password: config.password,
     },
   });
 
@@ -54,6 +57,7 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
       config: {
         username: data.username,
         token: data.token,
+        password: data.password,
       },
     };
 
@@ -110,12 +114,27 @@ const AccessUnicloudForm = ({ data, op, onAfterReq }: AccessUnicloudFormProps) =
 
           <FormField
             control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t("access.authorization.form.password.label")}</FormLabel>
+                <FormControl>
+                  <Input type="text" placeholder={t("access.authorization.form.password.placeholder")} {...field} />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
             name="token"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>{t("access.authorization.form.token.label")}</FormLabel>
                 <FormControl>
-                  <Input type="text" placeholder={t("access.authorization.form.password.placeholder")} {...field} />
+                  <Input type="text" placeholder={t("access.authorization.form.token.placeholder")} {...field} />
                 </FormControl>
 
                 <FormMessage />

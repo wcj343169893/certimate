@@ -116,6 +116,11 @@ const Edit = () => {
         disableFollowCNAME: data.disableFollowCNAME,
       },
     };
+    //获取当前的小时和分钟，用于每天crontab的定时任务
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    req.crontab = `${minutes} ${hours} * * *`;
 
     try {
       const resp = await save(req);
