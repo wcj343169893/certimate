@@ -2,15 +2,16 @@ package deployer
 
 import (
 	"bytes"
-	"certimate/internal/domain"
-	"certimate/internal/pkg/utils/maps"
-	"certimate/internal/utils/app"
 	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
 	"net/url"
 	"time"
+
+	"certimate/internal/domain"
+	"certimate/internal/pkg/utils/maps"
+	"certimate/internal/utils/app"
 
 	xerrors "github.com/pkg/errors"
 
@@ -164,7 +165,7 @@ func (d *UnicloudDeployer) SaveToDB(access *domain.UnicloudAccess) error {
 	// 更新克隆的 AccessRecord 的 config 字段
 	clonedRecord.Set("config", access)
 	// 使用 Dao 方法更新数据库
-	if err := app.GetApp().Dao().SaveRecord(clonedRecord); err != nil {
+	if err := app.GetApp().Dao().SaveRecord(&clonedRecord); err != nil {
 		return xerrors.Wrap(err, "failed to update access record")
 	}
 	d.infos = append(d.infos, toStr("SaveToDB", "保存成功"))
@@ -173,7 +174,7 @@ func (d *UnicloudDeployer) SaveToDB(access *domain.UnicloudAccess) error {
 
 // 如果token过期，重新获取token，请求地址：https://ulogin.cqsort.com/get_token?id=xxx&username=xxx&password=xxx
 func (d *UnicloudDeployer) GetToken(access *domain.UnicloudAccess) (string, error) {
-	url := "https://ulogin.cqsort.com/get_token"
+	url := "https://ulogin.cqsort.com/token"
 	// data := &unicloudToken{
 	// 	Id:       maps.GetValueAsString(d.option.DeployConfig.Config, "spaceId"),
 	// 	Username: access.Username,
