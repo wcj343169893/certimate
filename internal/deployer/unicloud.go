@@ -2,6 +2,9 @@ package deployer
 
 import (
 	"bytes"
+	"certimate/internal/domain"
+	"certimate/internal/pkg/utils/maps"
+	"certimate/internal/utils/app"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -11,8 +14,6 @@ import (
 
 	xerrors "github.com/pkg/errors"
 
-	"certimate/internal/domain"
-	"certimate/internal/pkg/utils/maps"
 	xhttp "certimate/internal/utils/http"
 )
 
@@ -113,6 +114,7 @@ func (d *UnicloudDeployer) CheckToken(access *domain.UnicloudAccess) error {
 			return xerrors.Wrap(err, "failed to get new token")
 		}
 		access.Token = token
+		d.SaveToDB(access)
 	}
 
 	// 使用当前的 token 发送请求检查其是否有效
@@ -147,11 +149,25 @@ func (d *UnicloudDeployer) CheckToken(access *domain.UnicloudAccess) error {
 		if err != nil {
 			return xerrors.Wrap(err, "failed to send unicloud request with new token")
 		}
+		d.SaveToDB(access)
 	}
 	// 处理响应
 	d.infos = append(d.infos, toStr("CheckToken Response", string(resp)))
 	d.infos = append(d.infos, toStr("token 检查通过 ", access.Token))
+	return nil
+}
 
+// 保存到数据库
+func (d *UnicloudDeployer) SaveToDB(access *domain.UnicloudAccess) error {
+	// 克隆 AccessRecord
+	clonedRecord := *d.option.AccessRecord
+	// 更新克隆的 AccessRecord 的 config 字段
+	clonedRecord.Set("config", access)
+	// 使用 Dao 方法更新数据库
+	if err := app.GetApp().Dao().SaveRecord(clonedRecord); err != nil {
+		return xerrors.Wrap(err, "failed to update access record")
+	}
+	d.infos = append(d.infos, toStr("SaveToDB", "保存成功"))
 	return nil
 }
 
