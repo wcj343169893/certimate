@@ -1,23 +1,16 @@
 package deployer
 
 import (
-	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
-	"net/http"
 
 	"certimate/internal/domain"
 	"certimate/internal/pkg/utils/maps"
 
+	auto "certimate/internal/automation/unicloud"
+
 	xerrors "github.com/pkg/errors"
-
-	xhttp "certimate/internal/utils/http"
-)
-
-// 定义访问url
-const (
-	Url = "https://ulogin.cqsort.com"
 )
 
 type UnicloudDeployer struct {
@@ -58,30 +51,18 @@ func (d *UnicloudDeployer) Deploy(ctx context.Context) error {
 	// 打印日志
 	d.infos = append(d.infos, toStr("Unicloud Access", access.Username))
 
-	data := &unicloudData{
-		Username: access.Username,
-		Password: access.Password,
-		Id:       maps.GetValueAsString(d.option.DeployConfig.Config, "spaceId"),
-		Cert:     d.option.Certificate.Certificate,
-		Key:      d.option.Certificate.PrivateKey,
-	}
-	
-	// 打印请求信息
-	url := Url + "/cert"
-	d.infos = append(d.infos, toStr("Unicloud Request", url))
-	body, _ := json.Marshal(data)
-	resp, err := xhttp.Req(url, http.MethodPost, bytes.NewReader(body), map[string]string{
-		"Content-Type":    "application/json",
-		"User-Agent":      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-		"Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-		"Accept":          "*/*",
-		"Connection":      "keep-alive",
-	})
+	err := auto.UpdateCert(
+		maps.GetValueAsString(d.option.DeployConfig.Config, "spaceId"),
+		access.Username,
+		access.Password,
+		d.option.Certificate.Certificate,
+		d.option.Certificate.PrivateKey,
+	)
 	if err != nil {
-		return xerrors.Wrap(err, "failed to send unicloud request")
+		return fmt.Errorf("unicloud deploy failed: %w", err)
 	}
 
-	d.infos = append(d.infos, toStr("Unicloud Response", string(resp)))
+	d.infos = append(d.infos, toStr("Unicloud Response", string("success")))
 
 	return nil
 }

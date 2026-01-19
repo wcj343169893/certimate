@@ -170,7 +170,6 @@ export type WebhookConfig = {
 
 export type UnicloudConfig = {
   username: string;
-  token: string;
   password: string;
 };
 
