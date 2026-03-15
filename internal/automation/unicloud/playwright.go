@@ -14,11 +14,14 @@ func UpdateCert(
 	cert string,
 	key string,
 ) error {
-	if err := playwright.Install(); err != nil {
-		return err
-	}
+	// Use default paths for playwright
+	log.Println("[unicloud] using default paths for playwright")
 
-	pw, err := playwright.Run()
+	// Try to run playwright
+	runOptions := &playwright.RunOptions{
+		SkipInstallBrowsers: true,
+	}
+	pw, err := playwright.Run(runOptions)
 	if err != nil {
 		return err
 	}
@@ -48,13 +51,34 @@ func UpdateCert(
 	if err != nil {
 		return err
 	}
+
+	// Set user agent and other headers
+	page.SetExtraHTTPHeaders(map[string]string{
+		"User-Agent":      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+		"Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+		"Accept-Language": "zh-CN,zh;q=0.9",
+		"Accept-Encoding": "gzip, deflate, br, zstd",
+		"Cache-Control":   "no-cache",
+		"Pragma":          "no-cache",
+		"Priority":        "u=0, i",
+		"Sec-CH-UA":       "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+		"Sec-CH-UA-Mobile": "?0",
+		"Sec-CH-UA-Platform": "\"Windows\"",
+		"Sec-Fetch-Dest":   "document",
+		"Sec-Fetch-Mode":   "navigate",
+		"Sec-Fetch-Site":   "same-origin",
+		"Sec-Fetch-User":   "?1",
+		"Upgrade-Insecure-Requests": "1",
+	})
+
 	// 访问登录页面
 	log.Println("[unicloud] navigating to login page...")
 
 	_, err = page.Goto(
-		"https://unicloud.dcloud.net.cn/pages/login/login?change=1",
+		"https://unicloud.dcloud.net.cn/pages/login/login",
 		playwright.PageGotoOptions{
-			WaitUntil: playwright.WaitUntilStateNetworkidle,
+			WaitUntil: playwright.WaitUntilStateLoad,
+			Timeout:   playwright.Float(60000),
 		},
 	)
 	if err != nil {
