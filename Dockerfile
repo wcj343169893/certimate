@@ -6,7 +6,7 @@ COPY . /app/
 
 RUN \
   cd /app/ui && \
-  npm install && \
+  npm install --no-audit --no-fund && \
   npm run build
 
 
@@ -53,7 +53,6 @@ RUN apk add --no-cache \
     nodejs
 
 COPY --from=builder /app/certimate .
-COPY --from=builder /root/.cache/ms-playwright-go /root/.cache/ms-playwright-go
 COPY --from=builder /root/.cache/ms-playwright /root/.cache/ms-playwright
 
 ENTRYPOINT ["./certimate", "serve", "--http", "0.0.0.0:8090"]
