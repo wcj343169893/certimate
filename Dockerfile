@@ -44,8 +44,23 @@ RUN npm install -g playwright
 # Install only Chromium browser
 RUN npx playwright install chromium
 
-# Install Chromium dependencies
-RUN npx playwright install-deps chromium
+# Install Chromium dependencies manually instead of using playwright install-deps
+RUN apk add --no-cache \
+    libstdc++ \
+    glib \
+    libx11 \
+    libxcomposite \
+    libxdamage \
+    libxext \
+    libxfixes \
+    libxrandr \
+    libxrender \
+    libxtst \
+    libxcb \
+    libxkbcommon \
+    mesa-gl \
+    dbus \
+    tzdata
 
 # Clean up
 RUN npm cache clean --force && \
