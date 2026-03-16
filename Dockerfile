@@ -21,8 +21,9 @@ RUN rm -rf /app/ui/dist
 
 COPY --from=front-builder /app/ui/dist /app/ui/dist
 
-# Install Playwright dependencies and only Chromium browser
-RUN apk add --no-cache \
+# Install base dependencies
+RUN apk update && \
+  apk add --no-cache \
     ca-certificates \
     chromium \
     nss \
@@ -30,19 +31,32 @@ RUN apk add --no-cache \
     harfbuzz \
     ttf-freefont \
     nodejs \
-    npm \
+    npm
+
+# Install curl and wget separately
+RUN apk add --no-cache \
     curl \
-    wget && \
-  npm install -g playwright && \
-  npx playwright install chromium && \
-  npx playwright install-deps chromium && \
-  npm cache clean --force && \
-  rm -rf /root/.npm
+    wget
+
+# Install Playwright
+RUN npm install -g playwright
+
+# Install only Chromium browser
+RUN npx playwright install chromium
+
+# Install Chromium dependencies
+RUN npx playwright install-deps chromium
+
+# Clean up
+RUN npm cache clean --force && \
+  rm -rf /root/.npm && \
+  rm -rf /var/cache/apk/*
 
 # Set Playwright environment variables
 ENV PLAYWRIGHT_BROWSERS_PATH=/root/.cache/ms-playwright
 ENV PLAYWRIGHT_DRIVER_PATH=/usr/local/lib/node_modules/playwright
 
+# Build the application
 RUN go build -o certimate && \
   rm -rf /go/pkg
 
@@ -51,15 +65,17 @@ FROM alpine:latest
 
 WORKDIR /app
 
-# Install only runtime dependencies
-RUN apk add --no-cache \
+# Install runtime dependencies
+RUN apk update && \
+  apk add --no-cache \
     ca-certificates \
     chromium \
     nss \
     freetype \
     harfbuzz \
     ttf-freefont \
-    nodejs
+    nodejs && \
+  rm -rf /var/cache/apk/*
 
 # Set Playwright environment variables
 ENV PLAYWRIGHT_BROWSERS_PATH=/root/.cache/ms-playwright
