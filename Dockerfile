@@ -71,8 +71,8 @@ RUN npm cache clean --force && \
 ENV PLAYWRIGHT_BROWSERS_PATH=/root/.cache/ms-playwright
 ENV PLAYWRIGHT_DRIVER_PATH=/usr/local/lib/node_modules/playwright
 
-# Build the application
-RUN go build -o certimate && \
+# Build the application with verbose output
+RUN go build -v -o certimate && \
   rm -rf /go/pkg
 
 
