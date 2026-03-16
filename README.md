@@ -212,3 +212,5 @@ Certimate 是一个免费且开源的项目，采用 [MIT 开源协议](LICENSE.
 ## 十、Star 趋势图
 
 [![Stargazers over time](https://starchart.cc/usual2970/certimate.svg?variant=adaptive)](https://starchart.cc/usual2970/certimate)
+
+重新构建一下 docker 镜像
