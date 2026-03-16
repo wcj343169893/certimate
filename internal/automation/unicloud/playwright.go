@@ -20,6 +20,7 @@ func UpdateCert(
 	// Try to run playwright
 	runOptions := &playwright.RunOptions{
 		SkipInstallBrowsers: true,
+		BrowsersPath:        "/root/.cache/ms-playwright",
 	}
 	pw, err := playwright.Run(runOptions)
 	if err != nil {
